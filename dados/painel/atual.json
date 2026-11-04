@@ -1,0 +1,21 @@
+{
+  "atualizadoEm": "2026-11-04",
+  "indicadores": [
+    {
+      "rotulo": "CBS: alíquota de referência 2027",
+      "situacao": "Calculada pelo TCU; o Senado decide até 15/12/2026",
+      "valor": "11,3%"
+    },
+    {
+      "rotulo": "IBS de teste (2027 e 2028)",
+      "situacao": "Referência definitiva ainda não definida",
+      "valor": "0,1%"
+    },
+    {
+      "rotulo": "Split payment: disponibilidade geral",
+      "situacao": "Previsão; opcional e só B2B na fase inicial",
+      "valor": "02/08/2027"
+    }
+  ],
+  "proximaExecucao": "2026-11-09"
+}

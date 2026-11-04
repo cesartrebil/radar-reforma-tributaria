@@ -1,0 +1,157 @@
+{
+  "data": "2026-11-04",
+  "itens": [
+    {
+      "fonte": {
+        "nome": "Senado Notícias",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/03/senado-deve-receber-calculo-da-cbs-na-proxima-terca-para-definir-aliquota"
+      },
+      "status": "Oficial",
+      "tema": "Alíquotas",
+      "texto": "O estudo chega ao Senado em 10/11, dia de audiência pública na CAE; uma reportagem de 31/10 citava o início das audiências em 11/11. O Senado tem até 15/12 para fixar a alíquota por resolução. Sem deliberação, prevalece o cálculo do TCU.",
+      "titulo": "TCU calcula a CBS de 2027 em 11,3%"
+    },
+    {
+      "fonte": {
+        "nome": "Garcia Cont",
+        "url": "https://garciacont.com.br/artigos/aliquota-cbs-2027-tcu-11-3-ibs-o-que-muda"
+      },
+      "status": "Imprensa",
+      "tema": "Alíquotas",
+      "texto": "A CBS é reduzida em 0,1 ponto em 2027 e 2028 para compensar o IBS de teste, se os 11,3% forem mantidos. A referência definitiva do IBS ainda não foi definida, e a cobrança efetiva começa em 2029.",
+      "titulo": "Em 2027, a conta fica em CBS de 11,2% e IBS de 0,1%"
+    },
+    {
+      "fonte": {
+        "nome": "Conjur",
+        "url": "https://conjur.com.br/2026-out-28/tcu-propoe-aliquota-de-referencia-da-cbs-em-113-para-2027/"
+      },
+      "status": "Imprensa",
+      "tema": "Alíquotas",
+      "texto": "O redutor foi calculado pelo TCU, no mesmo processo, sobre as alíquotas nas compras da administração pública.",
+      "titulo": "Compras governamentais têm redutor de 44,2%"
+    },
+    {
+      "fonte": {
+        "nome": "Convergência Digital",
+        "url": "https://convergenciadigital.com.br/?p=56591"
+      },
+      "status": "Imprensa",
+      "tema": "Alíquotas",
+      "texto": "A Frente Parlamentar do Empreendedorismo pede que o Senado rejeite os 11,3%, comparando-os aos 9% esperados pelo setor produtivo. A manifestação é de 28/10 e não representa decisão do Senado.",
+      "titulo": "Frente parlamentar pede rejeição da alíquota"
+    },
+    {
+      "fonte": {
+        "nome": "Forbes Brasil",
+        "url": "https://forbes.com.br/forbes-money/2026/11/governo-enviara-mp-imposto-seletivo-congresso-durigan/"
+      },
+      "status": "Imprensa",
+      "tema": "Alíquotas",
+      "texto": "O ministro da Fazenda, Dario Durigan, disse em 3/11 que os cálculos enviados ao TCU apontam máxima de 11,3% e média próxima de 8,5%. A média é uma estimativa citada pelo ministro, não uma alíquota fixada.",
+      "titulo": "Durigan cita alíquota média perto de 8,5%"
+    },
+    {
+      "fonte": {
+        "nome": "Contábeis, citando a Folha",
+        "url": "https://www.contabeis.com.br/noticias/80411/split-payment-comeca-a-ser-implementado-em-2027-veja-o-cronograma/"
+      },
+      "status": "Imprensa",
+      "tema": "Split payment",
+      "texto": "TEF, TED, Pix com chave e QR estático em 2/8/2027; boleto, QR dinâmico e Pix automático em 4/10/2027. O uso é opcional, restrito a B2B e sem cartões na fase inicial. O cronograma depende dos prazos de desenvolvimento dos envolvidos.",
+      "titulo": "Calendário prevê uso geral em agosto e outubro de 2027"
+    },
+    {
+      "fonte": {
+        "nome": "Comsefaz",
+        "url": "https://comsefaz.org.br/novo/split-payment-entra-em-fase-de-testes-a-partir-de-15-de-outubro-saiba-o-que-muda/"
+      },
+      "status": "Oficial",
+      "tema": "Split payment",
+      "texto": "Os testes ocorrem em ambiente controlado, sem efeito em operações reais. Formulários para os demais prestadores saem em 13/11, e as inscrições começam em 16/11.",
+      "titulo": "Testes de integração em andamento desde 15/10"
+    },
+    {
+      "fonte": {
+        "nome": "Receita Federal",
+        "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/setembro/simples-nacional-2027-entenda-os-novos-prazos-e-faca-sua-escolha-com-consciencia-e-tranquilidade"
+      },
+      "status": "Oficial",
+      "tema": "Simples Nacional",
+      "texto": "A opção pelo regime regular de IBS/CBS para janeiro a junho de 2027 terminou em 30/10. O prazo de 30/11, que ainda aparece em alguns textos, foi substituído.",
+      "titulo": "Cancelamento da opção vai de 3/11 a 20/12"
+    },
+    {
+      "fonte": {
+        "nome": "Receita Federal",
+        "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/outubro/mais-de-1-milhao-de-contribuintes-ja-optaram-pelo-regime-regular-do-ibs-e-da-cbs"
+      },
+      "status": "Oficial",
+      "tema": "Simples Nacional",
+      "texto": "A Receita informou 1.000.142 opções em notícia de 29/10, atualizada em 3/11. A página não indica a data de corte do número.",
+      "titulo": "Mais de 1 milhão optaram pelo regime regular"
+    },
+    {
+      "fonte": {
+        "nome": "Receita Federal",
+        "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/outubro/novas-medidas-simplificam-obrigacoes-da-reforma-tributaria-para-nanoempreendedores-e-meis"
+      },
+      "status": "Oficial",
+      "tema": "Simples Nacional",
+      "texto": "O Decreto 13.140/2026 e a Resolução CGSN 195/2026 dispensam nanoempreendedores de inscrição no CNPJ e de documentos fiscais eletrônicos ligados aos novos tributos. MEIs poderão usar a DASN-Simei como documento fiscal em vendas a pessoa física. A notícia não informa o início da vigência.",
+      "titulo": "Novas regras simplificam obrigações de nanoempreendedores e MEIs"
+    },
+    {
+      "fonte": {
+        "nome": "Agência Brasil (Radioagência)",
+        "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/economia/audio/2026-11/mp-do-imposto-seletivo-deve-chegar-ao-congresso-nesta-quarta"
+      },
+      "status": "A confirmar",
+      "tema": "Imposto Seletivo",
+      "texto": "A Agência Brasil informou em 4/11 que a MP deve chegar ao Congresso nesta quarta, depois de a reunião de Lula com os ministros da Fazenda e do Planejamento passar de terça para quarta. Não localizamos número nem alíquotas publicadas. Números como 250% para cigarros são estimativas de 2024, não alíquotas oficiais.",
+      "titulo": "MP do Seletivo segue sem publicação confirmada"
+    },
+    {
+      "fonte": {
+        "nome": "Agência Brasil",
+        "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-quer-enviar-mp-do-imposto-seletivo-ainda-hoje-ao-congresso"
+      },
+      "status": "Imprensa",
+      "tema": "Imposto Seletivo",
+      "texto": "Segundo Durigan, o acordo com os setores mantém a carga atual do IPI e o próprio IPI em janeiro de 2027, com o Seletivo a partir de fevereiro. O governo pretende enviar uma PEC para prorrogar temporariamente o IPI nesses segmentos. O modelo permanente, previsto para 2028, será debatido no Congresso ao longo de 2027.",
+      "titulo": "IPI deve ficar em janeiro, com PEC ainda por enviar"
+    },
+    {
+      "fonte": {
+        "nome": "IOB",
+        "url": "https://noticias.iob.com.br/reforma-tributaria-regulamentos-cbs-ibs/"
+      },
+      "status": "Imprensa",
+      "tema": "Regulamentação",
+      "texto": "A CBS é regulamentada pelo Decreto 12.955/2026, e o IBS, pela Resolução CGIBS 6/2026. Vários pontos ainda dependem de atos conjuntos da Receita e do Comitê Gestor.",
+      "titulo": "Regulamentos publicados; atos conjuntos ainda pendentes"
+    },
+    {
+      "fonte": {
+        "nome": "LegisWeb",
+        "url": "https://www.legisweb.com.br/noticia/?id=34065"
+      },
+      "status": "Imprensa",
+      "tema": "Regulamentação",
+      "texto": "O Ato Conjunto RFB/CGIBS 4/2026 torna obrigatórios os eventos periódicos mensais da Declaração de Regimes Específicos (DeRE) em 15/11. As etapas seguintes vêm em 1/12/2026 e 1/1/2027. Não encontramos notícia de adiamento.",
+      "titulo": "DeRE: eventos mensais começam em 15/11"
+    },
+    {
+      "fonte": {
+        "nome": "Receita Federal",
+        "url": "https://www.gov.br/receitafederal/pt-br/assuntos/noticias/2026/outubro/receita-federal-e-cgibs-discutem-ampliacao-do-prazo-de-opcao-pelo-regime-especifico-da-cbs-e-do-ibs-para-as-cooperativas-ate-30-de-novembro"
+      },
+      "status": "Oficial",
+      "tema": "Regulamentação",
+      "texto": "Receita e CGIBS discutem levar a opção das cooperativas pelo regime específico até 30/11. A mudança ainda precisa passar pela governança do CGIBS e ser formalizada em norma, que não localizamos. A opção exige registro no portal e envio da lista de associados.",
+      "titulo": "Cooperativas podem ter prazo ampliado até 30/11"
+    }
+  ],
+  "resumo": "A alíquota da CBS ainda depende do Senado, e a audiência da CAE ainda não aconteceu. A MP do Imposto Seletivo era esperada para hoje, mas sua publicação não foi confirmada.",
+  "titulo": "CBS de 11,3% vai ao Senado e split payment ganha calendário"
+}

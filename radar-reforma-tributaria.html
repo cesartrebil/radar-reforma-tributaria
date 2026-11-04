@@ -1,0 +1,296 @@
+<title>Radar da Reforma Tributária</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;600;700&display=swap">
+<style>
+/* Layout: painel de indicadores no topo; edições semanais à esquerda e agenda de prazos à direita. */
+:root {
+  --bg: #eef2f4;
+  --surface: #ffffff;
+  --ink: #15242e;
+  --muted: #566772;
+  --line: #cfd9de;
+  --accent: #0b5c7a;
+  --accent-soft: #d9eaf1;
+  --warn: #8a5300;
+  --warn-soft: #fbeccd;
+  --good: #1c6b46;
+  --good-soft: #d9f0e3;
+  --bad: #a3322a;
+  --bad-soft: #f9e0dd;
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101a20; --surface: #18252d; --ink: #e7eef1; --muted: #9fb0ba; --line: #2f414c;
+    --accent: #6cc0dd; --accent-soft: #173644; --warn: #f0bd66; --warn-soft: #3d2d10;
+    --good: #72d0a0; --good-soft: #17392a; --bad: #f09a92; --bad-soft: #43201d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101a20; --surface: #18252d; --ink: #e7eef1; --muted: #9fb0ba; --line: #2f414c;
+  --accent: #6cc0dd; --accent-soft: #173644; --warn: #f0bd66; --warn-soft: #3d2d10;
+  --good: #72d0a0; --good-soft: #17392a; --bad: #f09a92; --bad-soft: #43201d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font: 400 16px/1.5 var(--body); }
+.wrap {
+  max-width: 1180px; margin: 0 auto; padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 24px;
+}
+header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px; }
+h1 { font: 800 clamp(1.9rem, 4.5vw, 2.8rem)/1.05 var(--display); letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.sub { margin: 6px 0 0; color: var(--muted); max-width: 60ch; }
+.runs { font: 400 .82rem/1.6 var(--mono); color: var(--muted); display: grid; gap: 2px; }
+.runs b { color: var(--ink); font-weight: 600; }
+
+.panel { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); background: var(--surface); border: 1px solid var(--line); }
+.ind { padding: 14px 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 0 -1px -1px 0; min-width: 0; display: grid; gap: 2px; align-content: start; }
+.ind .lab { font-size: .84rem; color: var(--muted); font-weight: 600; }
+.ind .val { font: 600 1.7rem/1.2 var(--mono); font-variant-numeric: tabular-nums; }
+.ind .note { font-size: .86rem; color: var(--muted); }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font: 600 .88rem var(--body); padding: 5px 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; cursor: pointer; }
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.cols { display: grid; grid-template-columns: minmax(0, 1fr) 372px; gap: 32px; align-items: start; }
+@media (max-width: 900px) { .cols { grid-template-columns: minmax(0, 1fr); } .agenda-col { order: -1; } }
+h2 { font: 700 1.25rem/1.2 var(--display); margin: 0 0 12px; }
+.col { min-width: 0; }
+
+.ed { display: grid; gap: 12px; padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--line); }
+.ed:last-child { border-bottom: 0; margin-bottom: 0; }
+.ed-date { font: 500 .84rem var(--mono); color: var(--accent); }
+.ed h3 { font: 700 1.3rem/1.2 var(--display); margin: 2px 0 0; text-wrap: balance; }
+.ed-sum { margin: 0; max-width: 68ch; }
+.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.item { background: var(--surface); border: 1px solid var(--line); padding: 12px 14px; display: grid; gap: 4px; min-width: 0; }
+.item h4 { font: 700 1rem/1.3 var(--body); margin: 0; }
+.item p { margin: 0; font-size: .96rem; max-width: 68ch; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.tag { font: 500 .74rem var(--mono); color: var(--muted); }
+.pill { font: 600 .74rem var(--body); padding: 1px 8px; border-radius: 3px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.pill.warn { background: var(--warn-soft); color: var(--warn); }
+.pill.good { background: var(--good-soft); color: var(--good); }
+.pill.bad { background: var(--bad-soft); color: var(--bad); }
+a { color: var(--accent); overflow-wrap: anywhere; }
+.src { font-size: .86rem; }
+
+.agenda-col { background: var(--surface); border: 1px solid var(--line); padding: 16px; }
+.ev { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+.ev:first-of-type { border-top: 0; }
+.ev-d { font: 600 .84rem/1.35 var(--mono); font-variant-numeric: tabular-nums; }
+.ev-d small { display: block; font: 400 .72rem var(--mono); color: var(--muted); }
+.ev-b { display: grid; gap: 3px; min-width: 0; }
+.ev-t { font-weight: 700; line-height: 1.3; }
+.ev-n { font-size: .9rem; color: var(--muted); }
+details { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+summary { cursor: pointer; font-weight: 600; color: var(--muted); }
+.empty { color: var(--muted); padding: 16px 0; max-width: 60ch; margin: 0; }
+footer { color: var(--muted); font-size: .86rem; max-width: 80ch; }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Radar da Reforma Tributária</h1>
+      <p class="sub">Novidades semanais sobre CBS, IBS, split payment e Imposto Seletivo, com a agenda dos próximos prazos.</p>
+    </div>
+    <div class="runs" id="runs"></div>
+  </header>
+
+  <section class="panel" id="panel" aria-label="Indicadores atuais"></section>
+
+  <div class="filters" id="filters" role="group" aria-label="Filtrar por tema"></div>
+
+  <div class="cols">
+    <main class="col">
+      <h2>Edições semanais</h2>
+      <div id="eds"><p class="empty">Carregando as edições…</p></div>
+    </main>
+    <aside class="col agenda-col">
+      <h2>Agenda de prazos</h2>
+      <div id="agenda"><p class="empty">Carregando a agenda…</p></div>
+    </aside>
+  </div>
+
+  <footer>Conteúdo informativo reunido de fontes públicas. Confirme prazos e alíquotas no Diário Oficial e com seu contador antes de decidir.</footer>
+</div>
+
+<script>
+(function () {
+  var TEMAS = ["Todos", "Alíquotas", "Split payment", "Simples Nacional", "Imposto Seletivo", "Regulamentação"];
+  var state = { tema: "Todos", eds: null, agenda: null, painel: null };
+  var $ = function (id) { return document.getElementById(id); };
+
+  function h(tag, attrs) {
+    var el = document.createElement(tag);
+    Object.keys(attrs || {}).forEach(function (k) {
+      if (k === "text") el.textContent = attrs[k]; else el.setAttribute(k, attrs[k]);
+    });
+    for (var i = 2; i < arguments.length; i++) if (arguments[i]) el.appendChild(arguments[i]);
+    return el;
+  }
+  function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); return el; }
+  function msg(id, text) { clear($(id)).appendChild(h("p", { "class": "empty", text: text })); }
+  function toDate(s) { return new Date(String(s).slice(0, 10) + "T12:00:00"); }
+  function today() { var d = new Date(); d.setHours(12, 0, 0, 0); return d; }
+  function days(s) { return Math.round((toDate(s) - today()) / 86400000); }
+  function fmt(s, opts) { return toDate(s).toLocaleDateString("pt-BR", opts || { day: "2-digit", month: "2-digit", year: "numeric" }); }
+  function safeUrl(u) { try { var p = new URL(u); return p.protocol === "https:" || p.protocol === "http:" ? p.href : null; } catch (e) { return null; } }
+  function source(f) {
+    if (!f || !f.nome) return null;
+    var u = safeUrl(f.url);
+    if (!u) return h("span", { "class": "src", text: "Fonte: " + f.nome });
+    var wrap = h("span", { "class": "src", text: "Fonte: " });
+    wrap.appendChild(h("a", { href: u, target: "_blank", rel: "noopener noreferrer", text: f.nome }));
+    return wrap;
+  }
+  var TONS = { confirmado: "good", oficial: "good", "concluído": "good", previsto: "", novo: "", "a confirmar": "warn", imprensa: "warn", adiado: "bad", cancelado: "bad" };
+  function pill(t) {
+    if (!t) return null;
+    var tone = TONS[String(t).toLowerCase()] || "";
+    return h("span", { "class": "pill " + tone, text: t });
+  }
+  function matches(x) { return state.tema === "Todos" || x.tema === state.tema; }
+
+  function renderFilters() {
+    var box = clear($("filters"));
+    TEMAS.forEach(function (t) {
+      var b = h("button", { type: "button", "class": "chip", "aria-pressed": String(state.tema === t), text: t });
+      b.addEventListener("click", function () { state.tema = t; renderFilters(); renderEds(); renderAgenda(); });
+      box.appendChild(b);
+    });
+  }
+
+  function upcoming() {
+    return (state.agenda || []).filter(function (e) { var s = String(e.status).toLowerCase(); return days(e.data) >= 0 && s !== "concluído" && s !== "cancelado"; });
+  }
+
+  function renderPanel() {
+    var box = clear($("panel")), p = state.painel || {};
+    (p.indicadores || []).forEach(function (i) {
+      box.appendChild(h("div", { "class": "ind" },
+        h("span", { "class": "lab", text: i.rotulo }),
+        h("span", { "class": "val", text: i.valor }),
+        h("span", { "class": "note", text: i.situacao })));
+    });
+    var next = upcoming()[0];
+    if (next) {
+      var d = days(next.data);
+      box.appendChild(h("div", { "class": "ind" },
+        h("span", { "class": "lab", text: "Próximo marco" }),
+        h("span", { "class": "val", text: d === 0 ? "hoje" : d === 1 ? "1 dia" : d + " dias" }),
+        h("span", { "class": "note", text: (next.dataTexto || fmt(next.data)) + ": " + next.titulo })));
+    }
+    box.hidden = !box.firstChild;
+    var runs = clear($("runs"));
+    if (p.atualizadoEm) {
+      var a = h("span", { text: "Última atualização: " }); a.appendChild(h("b", { text: fmt(p.atualizadoEm) })); runs.appendChild(a);
+    }
+    if (p.proximaExecucao) {
+      var n = h("span", { text: "Próxima: " }); n.appendChild(h("b", { text: fmt(p.proximaExecucao) + ", por volta das 8h" })); runs.appendChild(n);
+    }
+  }
+
+  function renderEds() {
+    if (state.eds === null) return;
+    var box = clear($("eds"));
+    if (!state.eds.length) return msg("eds", "Nenhuma edição ainda. A primeira aparece aqui assim que a pesquisa semanal rodar.");
+    var shown = 0;
+    state.eds.forEach(function (ed) {
+      var items = (ed.itens || []).filter(matches);
+      if (state.tema !== "Todos" && !items.length) return;
+      shown++;
+      var art = h("article", { "class": "ed" });
+      art.appendChild(h("div", {},
+        h("div", { "class": "ed-date", text: "Edição de " + fmt(ed.data, { day: "2-digit", month: "long", year: "numeric" }) }),
+        h("h3", { text: ed.titulo })));
+      if (ed.resumo) art.appendChild(h("p", { "class": "ed-sum", text: ed.resumo }));
+      if (items.length) {
+        var ul = h("ul", { "class": "items" });
+        items.forEach(function (it) {
+          ul.appendChild(h("li", { "class": "item" },
+            h("div", { "class": "tags" }, h("span", { "class": "tag", text: it.tema }), pill(it.status)),
+            h("h4", { text: it.titulo }),
+            h("p", { text: it.texto }),
+            source(it.fonte)));
+        });
+        art.appendChild(ul);
+      }
+      box.appendChild(art);
+    });
+    if (!shown) msg("eds", "Nenhuma edição trata deste tema até agora.");
+  }
+
+  function evRow(e) {
+    var d = days(e.data);
+    var when = e.dataTexto || fmt(e.data, { day: "2-digit", month: "2-digit" });
+    var sub = e.dataTexto ? "" : toDate(e.data).getFullYear();
+    return h("div", { "class": "ev" },
+      h("div", { "class": "ev-d", text: when }, sub ? h("small", { text: String(sub) }) : null),
+      h("div", { "class": "ev-b" },
+        h("span", { "class": "ev-t", text: e.titulo }),
+        e.detalhe ? h("span", { "class": "ev-n", text: e.detalhe }) : null,
+        h("div", { "class": "tags" }, pill(e.status), h("span", { "class": "tag", text: e.tema + (d >= 0 && d <= 30 ? " · em " + d + " d" : "") })),
+        source(e.fonte)));
+  }
+
+  function renderAgenda() {
+    if (state.agenda === null) return;
+    var box = clear($("agenda"));
+    var list = state.agenda.filter(matches);
+    if (!list.length) return msg("agenda", state.agenda.length ? "Nenhum prazo deste tema na agenda." : "A agenda ainda está vazia. Os prazos aparecem aqui depois da primeira atualização.");
+    var isPast = function (e) { var s = String(e.status).toLowerCase(); return days(e.data) < 0 || s === "concluído" || s === "cancelado"; };
+    list.filter(function (e) { return !isPast(e); }).forEach(function (e) { box.appendChild(evRow(e)); });
+    var past = list.filter(isPast).reverse();
+    if (past.length) {
+      var det = h("details", {}, h("summary", { text: "Já passaram (" + past.length + ")" }));
+      past.forEach(function (e) { det.appendChild(evRow(e)); });
+      box.appendChild(det);
+    }
+  }
+
+  function renderAll() { renderPanel(); renderEds(); renderAgenda(); }
+
+  renderFilters();
+
+  claude.use("db").then(function (db) {
+    if (!db) {
+      msg("eds", "Não foi possível abrir os dados nesta visualização. Entre na sua conta Claude e abra o link novamente.");
+      msg("agenda", "A agenda depende do mesmo acesso.");
+      return;
+    }
+    var timer = setTimeout(function () {
+      if (state.eds === null) msg("eds", "Os dados ainda não chegaram. Verifique sua conexão; a página continua tentando.");
+      if (state.agenda === null) msg("agenda", "Os dados ainda não chegaram.");
+    }, 10000);
+    function fail() {
+      clearTimeout(timer);
+      if (state.eds === null) msg("eds", "Não foi possível carregar as edições. Abra a página novamente mais tarde.");
+      if (state.agenda === null) msg("agenda", "Não foi possível carregar a agenda.");
+    }
+    function rows(snap) { return snap.docs.map(function (d) { return d.data(); }); }
+    db.collection("edicoes").orderBy("data", "desc").limit(200).onSnapshot(function (s) {
+      if (!s.metadata.fromCache) clearTimeout(timer);
+      state.eds = rows(s); renderEds();
+    }, fail);
+    db.collection("agenda").orderBy("data", "asc").limit(500).onSnapshot(function (s) {
+      state.agenda = rows(s); renderAgenda(); renderPanel();
+    }, fail);
+    db.doc("painel/atual").onSnapshot(function (s) {
+      state.painel = s.exists ? s.data() : null; renderPanel();
+    }, fail);
+  });
+})();
+</script>
