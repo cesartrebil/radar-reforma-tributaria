@@ -1,11 +1,11 @@
 {
   "data": "2027-01-01",
-  "detalhe": "DUIMP, demais eventos da DeRE, documentos de optantes do Simples e NF-e de tributação monofásica. Ato Conjunto RFB/CGIBS 4/2026.",
+  "detalhe": "NFGas, NFAg, eventos transacionais da DeRE e parte da NFS-e, inclusive do Simples. Ato Conjunto RFB/CGIBS 7/2026; DUIMP não confirmada nas fontes.",
   "fonte": {
-    "nome": "LegisWeb",
-    "url": "https://www.legisweb.com.br/noticia/?id=34065"
+    "nome": "Fenacon",
+    "url": "https://fenacon.org.br/reforma-tributaria/publicado-novo-cronograma-para-emissao-de-documentos-fiscais-da-reforma-tributaria/"
   },
   "status": "Confirmado",
   "tema": "Regulamentação",
-  "titulo": "Última etapa do cronograma de documentos fiscais"
+  "titulo": "Documentos fiscais: primeira leva do novo cronograma"
 }

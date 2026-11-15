@@ -174,7 +174,7 @@ footer { color: var(--muted); font-size: .86rem; max-width: 80ch; }
   }
 
   function upcoming() {
-    return (state.agenda || []).filter(function (e) { var s = String(e.status).toLowerCase(); return days(e.data) >= 0 && s !== "concluído" && s !== "cancelado"; });
+    return (state.agenda || []).filter(function (e) { var s = String(e.status).toLowerCase(); return days(e.data) >= 0 && s !== "concluído" && s !== "cancelado" && s !== "adiado"; });
   }
 
   function renderPanel() {
