@@ -21,5 +21,6 @@
       "situacao": "Previsão; opcional e só B2B na fase inicial",
       "valor": "02/08/2027"
     }
-  ]
+  ],
+  "proximaExecucao": "2026-11-16"
 }
