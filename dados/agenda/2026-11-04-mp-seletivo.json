@@ -1,11 +1,11 @@
 {
   "data": "2026-11-04",
-  "detalhe": "Agência Brasil informou em 4/11 a expectativa de chegada ao Congresso nesta quarta; publicação não confirmada.",
+  "detalhe": "Alíquotas para 2027, com efeitos a partir de 2/2/2027.",
   "fonte": {
-    "nome": "Agência Brasil (Radioagência)",
-    "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/economia/audio/2026-11/mp-do-imposto-seletivo-deve-chegar-ao-congresso-nesta-quarta"
+    "nome": "Câmara dos Deputados",
+    "url": "https://www2.camara.leg.br/legin/fed/medpro/2026/medidaprovisoria-1399-4-novembro-2026-800091-publicacaooriginal-181743-pe.html"
   },
-  "status": "A confirmar",
+  "status": "Concluído",
   "tema": "Imposto Seletivo",
-  "titulo": "Publicação esperada da MP do Imposto Seletivo"
+  "titulo": "Publicação da MP 1.399/2026, do Imposto Seletivo"
 }
