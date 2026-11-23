@@ -1,0 +1,47 @@
+{
+  "data": "2026-11-23",
+  "itens": [
+    {
+      "fonte": {
+        "nome": "Senado Notícias",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/17/no-senado-ministro-da-fazenda-defende-novo-tributo-sobre-o-consumo"
+      },
+      "status": "Oficial",
+      "tema": "Alíquotas",
+      "texto": "Em 17/11, o ministro disse que 11,3% é a alíquota de referência necessária para manter a arrecadação atual e que o peso médio para o consumidor fica abaixo de 8,5%, com revisão anual. Participaram também o presidente do TCU e o secretário da Receita.",
+      "titulo": "Durigan defende os 11,3% na CAE"
+    },
+    {
+      "fonte": {
+        "nome": "Diário da Capital",
+        "url": "https://diariodacapital.com/materias/braga-cobra-transparencia-em-calculo-de-novo-imposto-federal/"
+      },
+      "status": "Imprensa",
+      "tema": "Alíquotas",
+      "texto": "Eduardo Braga pediu acesso aos critérios técnicos do cálculo, hoje sob sigilo, e questionou a distância entre os 11,3% e a estimativa anterior de 9,21%. Segundo a imprensa, a CAE aprovou em 18/11 um requerimento dele por transparência, e ele pediu simulações com 12,5%, 11% e 10%. Não há data para votar a resolução.",
+      "titulo": "Relator pede os critérios do cálculo e novas simulações"
+    },
+    {
+      "fonte": {
+        "nome": "NetCPA",
+        "url": "https://netcpa.com.br/colunas/split-payment-formulario-para-novos-prestadores-tem-divulgacao-prevista-para-esta-sexta-feira/28650"
+      },
+      "status": "A confirmar",
+      "tema": "Split payment",
+      "texto": "A abertura estava prevista para 16/11. A página do CGIBS listava um modelo preliminar do formulário, mas não encontramos confirmação de que o envio esteja aberto.",
+      "titulo": "Inscrição dos demais prestadores segue sem confirmação"
+    },
+    {
+      "fonte": {
+        "nome": "Congresso Nacional",
+        "url": "https://www.congressonacional.leg.br/materias/medidas-provisorias/-/mpv/176208"
+      },
+      "status": "A confirmar",
+      "tema": "Imposto Seletivo",
+      "texto": "Não localizamos instalação da comissão nem relator. A MP precisa virar lei até 31/12 para valer em 2027.",
+      "titulo": "Comissão mista da MP 1.399 sem notícia de instalação"
+    }
+  ],
+  "resumo": "Na audiência da CAE em 17/11, o ministro da Fazenda defendeu os 11,3% como alíquota de referência. O relator pediu acesso aos critérios do cálculo e simulações com outros percentuais. O Senado tem até 15/12 para decidir.",
+  "titulo": "Ministro defende a CBS de 11,3% no Senado, e relator pede os cálculos"
+}

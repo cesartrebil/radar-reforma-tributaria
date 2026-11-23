@@ -1,9 +1,9 @@
 {
-  "atualizadoEm": "2026-11-16",
+  "atualizadoEm": "2026-11-23",
   "indicadores": [
     {
       "rotulo": "CBS: alíquota de referência 2027",
-      "situacao": "Acórdão do TCU entregue em 10/11; o Senado decide até 15/12/2026",
+      "situacao": "Defendida pelo ministro na CAE em 17/11; o Senado decide até 15/12/2026",
       "valor": "11,3%"
     },
     {
@@ -22,5 +22,5 @@
       "valor": "02/08/2027"
     }
   ],
-  "proximaExecucao": "2026-11-23"
+  "proximaExecucao": "2026-11-30"
 }
